@@ -1,0 +1,55 @@
+<!doctype html>
+	<head>
+		<title>Task 3</title>
+	</head>
+
+	<body>
+		<p>Center content</p>
+	</body>
+
+	<body>
+
+		<link href="http://cdn.sencha.io/ext-4.1.1-gpl/resources/css/ext-all.css" rel="stylesheet" />
+		<script src="http://cdn.sencha.io/ext-4.1.1-gpl/ext-all.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+
+
+		<script type="text/javascript"> 
+		Ext.onReady(function(){
+		  var viewport = new Ext.Viewport({    
+		  	layout:'border',      
+		  	items:[{      
+		  		region:'west',      
+		  		id:'west-panel',      
+		  		title:'West',      
+		  		split:true,      
+		  		width: 200,
+		      layout:'accordion',      
+		      items: [{          
+		      	html: 'Navigation content',          
+		      	title:'Navigation'          
+		      },{        
+		      	title:'Settings',        
+		      	html: 'Settings content'        
+		      }]      
+		  },{    
+		  	region:'center',    
+		  	layout:'column',    
+		  	autoLoad:{      
+		  		url: 'ajax/center-content.html',       method:'GET'       
+		  	}    
+		  }]  
+		}); 
+		}); 
+
+
+		</script>
+
+
+	</body>
+
+
+</html>
